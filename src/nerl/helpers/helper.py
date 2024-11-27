@@ -23,6 +23,7 @@ class Helper:
             yield from self.break_up_file(tokens[chunk_size - overlap_size:],
                                           chunk_size, overlap_size)
 
+    # Why do we have filename as a parameter
     def break_up_file_chunks(self, filename, chunk_size=500, overlap_size=100):
         tokens = word_tokenize(self.text)
         return self.break_up_file(tokens, chunk_size, overlap_size)
